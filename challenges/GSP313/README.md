@@ -82,12 +82,12 @@ gcloud compute instance-groups managed set-target-pools nginx-web-servers \
 ### Firewall rule
 ```bash
 gcloud compute firewall-rules create fw-allow-health-check \
-    --network=default \
-    --action=allow \
-    --direction=ingress \
-    --source-ranges=130.211.0.0/22,35.191.0.0/16 \
-    --target-tags=nginx-web-server \
-    --rules=tcp:80
+  --network=default \
+  --action=allow \
+  --direction=ingress \
+  --source-ranges=130.211.0.0/22,35.191.0.0/16 \
+  --target-tags=nginx-web-server \
+  --rules=tcp:80
 ```
 
 ### Create a health check
@@ -133,7 +133,7 @@ gcloud compute addresses create nginx-server-ip
 ### Forwarding Rule
 ```bash
 gcloud compute forwarding-rules create nginx-web-server-forwarding-rule \
-    --ports 80 \
-    --address nginx-server-ip \
-    --target-pool nginx-web-server-pool
+  --ports 80 \
+  --address nginx-server-ip \
+  --target-pool nginx-web-server-pool
 ```
