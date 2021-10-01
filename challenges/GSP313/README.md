@@ -43,3 +43,97 @@ kubectl get service
 ```
 
 ## Task 3: Set up an HTTP load balancer
+
+### Create Instance Template
+```bash
+gcloud compute instance-templates create nginx-web-server-template \
+  --image-family debian-9 \
+  --image-project debian-cloud \
+  --tags nginx-web-server \
+  --machine-type f1-micro \
+  --metadata startup-script="#! /bin/bash
+	apt-get update
+	apt-get install -y nginx
+	service nginx start
+	sed -i -- 's/nginx/Google Cloud Platform - '"\$HOSTNAME"'/' /var/www/html/index.nginx-debian.html"
+```
+
+### Create a target pool
+
+```bash
+gcloud compute http-health-checks create basic-check
+gcloud compute target-pools create nginx-web-server-pool \
+  --http-health-check basic-check
+```
+
+### Create Managed Instance Group
+```bash
+gcloud compute instance-groups managed create nginx-web-servers \
+	--size 2 \
+	--template nginx-web-server-template
+```
+
+### Set Target Pool
+```bash
+gcloud compute instance-groups managed set-target-pools nginx-web-servers \
+  --target-pools nginx-web-server-pool
+```
+
+### Firewall rule
+```bash
+gcloud compute firewall-rules create fw-allow-health-check \
+    --network=default \
+    --action=allow \
+    --direction=ingress \
+    --source-ranges=130.211.0.0/22,35.191.0.0/16 \
+    --target-tags=nginx-web-server \
+    --rules=tcp:80
+```
+
+### Create a health check
+```bash
+gcloud compute health-checks create http http-basic-check \
+  --port 80
+```
+
+### Create a backend service
+```bash
+gcloud compute backend-services create web-backend-service \
+  --protocol=HTTP \
+  --port-name=http \
+  --health-checks=http-basic-check \
+  --global
+```
+
+### Attach the managed instance group to a backend service
+```bash
+gcloud compute backend-services add-backend web-backend-service \
+  --instance-group=nginx-web-servers \
+  --instance-group-zone=us-east1-b \
+  --global
+```
+
+### Create a URL map
+```bash
+gcloud compute url-maps create web-map-http \
+  --default-service web-backend-service
+```
+
+### Target the HTTP proxy to route requests to your URL map
+```bash
+gcloud compute target-http-proxies create http-lb-proxy \
+  --url-map web-map-http
+```
+
+### Create External IP Address
+```bash
+gcloud compute addresses create nginx-server-ip
+```
+
+### Forwarding Rule
+```bash
+gcloud compute forwarding-rules create nginx-web-server-forwarding-rule \
+    --ports 80 \
+    --address nginx-server-ip \
+    --target-pool nginx-web-server-pool
+```
