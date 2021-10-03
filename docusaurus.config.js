@@ -10,7 +10,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   baseUrl: '/qwiklabs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
   organizationName: 'jhasuraj01', // Usually your GitHub org/user name.
   projectName: 'qwiklabs', // Usually your repo name.
   trailingSlash: false,
