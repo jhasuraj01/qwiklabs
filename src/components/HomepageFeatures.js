@@ -22,7 +22,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Video Tutorials,
     Svg: require('../../static/img/video-tutorial.svg').default,
     description: (
       <>
