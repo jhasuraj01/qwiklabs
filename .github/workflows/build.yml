@@ -17,5 +17,6 @@ jobs:
         with:
           node-version: 14.x
       - run: |
+          export GIT_USER=jhasuraj01
           npm i
           npm run deploy
