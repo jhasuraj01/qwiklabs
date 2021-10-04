@@ -24,6 +24,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Create And Manage Cloud Resources',
+              collapsed: true,
               items: [
                 "GSP313",
               ],
@@ -31,6 +32,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Perform Foundational Infrastructure Tasks in Google Cloud',
+              collapsed: true,
               items: [
                 "GSP315",
               ],
@@ -38,6 +40,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Set Up and Configure a Cloud Environment in Google Cloud',
+              collapsed: true,
               items: [
                 "GSP321",
               ],
@@ -45,6 +48,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Deploy and Manage Cloud Environments with Google Cloud',
+              collapsed: true,
               items: [
                 "GSP314",
               ],
@@ -52,6 +56,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Build and Secure Networks in Google Cloud',
+              collapsed: true,
               items: [
                 "GSP322",
               ],
@@ -59,6 +64,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Deploy to Kubernetes in Google Cloud',
+              collapsed: true,
               items: [
                 "GSP318",
               ],
@@ -72,13 +78,19 @@ module.exports = {
             {
               type: 'category',
               label: 'Create and Manage Cloud Resources',
+              collapsed: true,
               items: [
-                "GSP313",
+                {
+                  type: 'link',
+                  label: "GSP313 Challenge Lab",
+                  href: '/labs/GSP313'
+                },
               ],
             },
             {
               type: 'category',
               label: 'Perform Foundational Data, ML, and AI Tasks in Google Cloud',
+              collapsed: true,
               items: [
                 "GSP323",
               ],
@@ -86,6 +98,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Insights from Data with BigQuery',
+              collapsed: true,
               items: [
                 "GSP787",
               ],
@@ -93,6 +106,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Engineer Data in Google Cloud',
+              collapsed: true,
               items: [
                 "GSP327",
               ],
@@ -100,6 +114,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Integrate with Machine Learning APIs',
+              collapsed: true,
               items: [
                 "GSP329",
               ],
@@ -107,6 +122,7 @@ module.exports = {
             {
               type: 'category',
               label: 'Explore Machine Learning Models with Explainable AI',
+              collapsed: true,
               items: [
                 "GSP324",
               ],
