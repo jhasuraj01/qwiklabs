@@ -14,15 +14,35 @@ module.exports = {
   sidebar: [
     {
       type: 'category',
-      label: 'Google Qwiklabs Solved Labs',
+      label: '30 Days of Google Cloud 2021',
       items: [
         'intro',
         {
           type: 'category',
           label: 'Create And Manage Cloud Resources',
-
           items: [
             "GSP313",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Perform Foundational Infrastructure Tasks in Google Cloud',
+          items: [
+            "GSP315",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Set Up and Configure a Cloud Environment in Google Cloud',
+          items: [
+            "GSP321",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Deploy and Manage Cloud Environments with Google Cloud',
+          items: [
+            "GSP314",
           ],
         },
       ],
