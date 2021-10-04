@@ -20,15 +20,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
+          sidebarPath: require.resolve('./sidebars/labs.js'),
+          routeBasePath: "labs",
           editUrl: 'https://github.com/jhasuraj01/qwiklabs/tree/main/',
-          showLastUpdateTime: true
+          showLastUpdateTime: true,
         },
         // blog: {
         //   showReadingTime: true,
-          // Please change this to your repo.
-          // editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+        // Please change this to your repo.
+        // editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/blog/',
         // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -44,6 +44,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         defaultMode: 'dark',
         respectPrefersColorScheme: true,
       },
+      hideableSidebar: true,
+      // announcementBar: {
+      //   content: "GSP313 Create and Manage Cloud Resources: Challenge Lab is Released",
+      //   backgroundColor: 'var(--ifm-color-primary)',
+      //   textColor: 'black',
+      //   id: "1",
+      // },
       navbar: {
         title: 'Qwiklabs',
         logo: {
@@ -57,12 +64,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             position: 'left',
             label: 'Challenge labs',
           },
-        //   {to: '/blog', label: 'Blog', position: 'left'},
-        //   {
-        //     href: 'https://github.com/facebook/docusaurus',
-        //     label: 'GitHub',
-        //     position: 'right',
-        //   },
+          //   {to: '/blog', label: 'Blog', position: 'left'},
+          //   {
+          //     href: 'https://github.com/facebook/docusaurus',
+          //     label: 'GitHub',
+          //     position: 'right',
+          //   },
         ],
       },
       footer: {
