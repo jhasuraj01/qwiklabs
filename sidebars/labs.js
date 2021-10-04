@@ -18,32 +18,100 @@ module.exports = {
       items: [
         'intro',
         {
-          type: 'category',
-          label: 'Create And Manage Cloud Resources',
+          type: "category",
+          label: 'Track 1: Cloud Engineering Track',
           items: [
-            "GSP313",
-          ],
+            {
+              type: 'category',
+              label: 'Create And Manage Cloud Resources',
+              items: [
+                "GSP313",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Perform Foundational Infrastructure Tasks in Google Cloud',
+              items: [
+                "GSP315",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Set Up and Configure a Cloud Environment in Google Cloud',
+              items: [
+                "GSP321",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Deploy and Manage Cloud Environments with Google Cloud',
+              items: [
+                "GSP314",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Build and Secure Networks in Google Cloud',
+              items: [
+                "GSP322",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Deploy to Kubernetes in Google Cloud',
+              items: [
+                "GSP318",
+              ],
+            },
+          ]
         },
         {
-          type: 'category',
-          label: 'Perform Foundational Infrastructure Tasks in Google Cloud',
+          type: "category",
+          label: 'Track 2: Data Science & Machine Learning Track',
           items: [
-            "GSP315",
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Set Up and Configure a Cloud Environment in Google Cloud',
-          items: [
-            "GSP321",
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Deploy and Manage Cloud Environments with Google Cloud',
-          items: [
-            "GSP314",
-          ],
+            {
+              type: 'category',
+              label: 'Create and Manage Cloud Resources',
+              items: [
+                "GSP313",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Perform Foundational Data, ML, and AI Tasks in Google Cloud',
+              items: [
+                "GSP323",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Insights from Data with BigQuery',
+              items: [
+                "GSP787",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Engineer Data in Google Cloud',
+              items: [
+                "GSP327",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Integrate with Machine Learning APIs',
+              items: [
+                "GSP329",
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Explore Machine Learning Models with Explainable AI',
+              items: [
+                "GSP324",
+              ],
+            },
+          ]
         },
       ],
     },
