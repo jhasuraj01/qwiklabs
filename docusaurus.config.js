@@ -80,7 +80,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             items: [
               {
                 label: 'Challenge Labs',
-                to: '/docs/intro',
+                to: '/labs/intro',
               },
             ],
           },
