@@ -26,6 +26,7 @@ module.exports = {
               label: 'Create And Manage Cloud Resources',
               collapsed: true,
               items: [
+                "GSP001",
                 "GSP313",
               ],
             },

@@ -26,3 +26,10 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.youtube-video {
+    width: 560px;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+}
