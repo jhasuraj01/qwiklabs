@@ -1,6 +1,6 @@
 ---
 id: LAB_ID
-title: LAB_ID Challenge Lab
+title: LAB_TITLE
 hide_title: true
 description: >
   LAB_DESCRIPTION
@@ -18,8 +18,7 @@ tags: [Qwiklabs]
 > Challenge Lab: LAB_LINK
 
 
-:::info TO DO
+## Lab Video
+import YouTubeVideo from "../src/components/YouTubeVideo"
 
-Wanna Contribute? Click the edit button below and create a [`Pull Request`](https://github.com/jhasuraj01/qwiklabs/tree/main/docs/LAB_ID.mdx)!
-
-:::
+<YouTubeVideo id="LAB_VIDEO"/>

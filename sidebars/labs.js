@@ -28,6 +28,9 @@ module.exports = {
               items: [
                 "GSP001",
                 "GSP093",
+                "GSP002",
+                "GSP100",
+                "GSP007",
                 "GSP313",
               ],
             },
@@ -82,11 +85,12 @@ module.exports = {
               label: 'Create and Manage Cloud Resources',
               collapsed: true,
               items: [
-                {
-                  type: 'link',
-                  label: "GSP313 Challenge Lab",
-                  href: '/labs/GSP313'
-                },
+                { type: 'link', label: "Creating a Virtual Machine", href: '/labs/GSP001' },
+                { type: 'link', label: "Compute Engine: Qwik Start - Windows", href: '/labs/GSP093' },
+                { type: 'link', label: "Getting Started with Cloud Shell and gcloud", href: '/labs/GSP002' },
+                { type: 'link', label: "Kubernetes Engine: Qwik Start", href: '/labs/GSP100' },
+                { type: 'link', label: "Set Up Network and HTTP Load Balancers", href: '/labs/GSP007' },
+                { type: 'link', label: "GSP313 Challenge Lab", href: '/labs/GSP313' },
               ],
             },
             {
