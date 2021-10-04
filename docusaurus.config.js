@@ -45,12 +45,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         respectPrefersColorScheme: true,
       },
       hideableSidebar: true,
-      // announcementBar: {
-      //   content: "GSP313 Create and Manage Cloud Resources: Challenge Lab is Released",
-      //   backgroundColor: 'var(--ifm-color-primary)',
-      //   textColor: 'black',
-      //   id: "1",
-      // },
+      announcementBar: {
+        content: "First Quest and Challenge Lab is Completed and all the resources are uploaded on this Website and YouTube Channel.",
+        backgroundColor: 'var(--ifm-color-primary)',
+        textColor: 'black',
+        id: "04-10-2021",
+      },
       navbar: {
         title: 'Qwiklabs',
         logo: {
